@@ -56,6 +56,7 @@ const Form = ({type, post, setPost, submitting, handleSubmit}) => {
           >
             <Link href="/" className='text-gray-500 text-sm'>
               Cancel
+            </Link>
             <button
               type='Submit'
               disabled={submitting}
@@ -63,7 +64,6 @@ const Form = ({type, post, setPost, submitting, handleSubmit}) => {
               >
               {submitting ? {type}+'...': type}
             </button>
-            </Link>
 
           </div>
         </label>

@@ -17,7 +17,8 @@ function CreatePrompt() {
         tag: '',
     });
 
-    const createPrompt = async (e) => {
+    const createPromptf = async (e) => {
+        console.log("called")
         e.preventDefault()
         setSubmitting(true)
         try {
@@ -30,9 +31,9 @@ function CreatePrompt() {
                     tag: post.tag
                 })
             })
-
+            
             if(response.ok){
-                Router.push('/');
+                router.push('/');
             }
         } catch (error) {
             console.log(error)
@@ -46,7 +47,7 @@ function CreatePrompt() {
         post={post}
         setPost={setPost}
         submitting={submitting}
-        handleSubmit={createPrompt}
+        handleSubmit={createPromptf}
     />
   )
 }
