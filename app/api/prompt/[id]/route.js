@@ -9,7 +9,7 @@ export const GET = async(request, {params}) =>{
         if(!prompts) return new Response('Prompt not found', {status: 404})
         return new Response(JSON.stringify(prompts), { status: 200})
     } catch (error) {
-        return new Response(error, { status: 500})
+        return new Response("Internal server Error", { status: 500})
     }
 }
 
