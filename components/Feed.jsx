@@ -30,7 +30,7 @@ const Feed = () => {
       return
     }
     const filteredposts = allPosts.filter((post) => 
-      post.prompt.includes(e.target.value)
+      post.prompt.includes(e.target.value) || post.tag.includes(e.target.value)
     )
     setPosts(filteredposts)
   }
